@@ -88,10 +88,10 @@ const Profile = () => {
       <div className="max-w-4xl mx-auto p-4 sm:p-6 lg:p-8 relative z-10">
         {/* Header */}
         <div className="flex items-center justify-between mb-8 pt-4">
-          <div>
+          {/* <div>
             <h1 className="text-4xl font-bold text-slate-900 tracking-tight">Profile</h1>
             <p className="text-slate-600 mt-1">Manage your personal information</p>
-          </div>
+          </div> */}
           <button
             onClick={handleLogout}
             className="flex items-center gap-2 px-5 py-2.5 text-sm font-semibold text-slate-700 hover:text-slate-900 bg-white/80 backdrop-blur-sm hover:bg-white border border-slate-200 rounded-2xl transition-all duration-200 shadow-sm hover:shadow-md"

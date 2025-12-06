@@ -39,14 +39,14 @@ const Login = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-slate-100 flex items-center justify-center p-4 relative overflow-hidden">
-      {/* Background decoration */}
+    
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-blue-100 to-purple-100 rounded-full blur-3xl opacity-30"></div>
         <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-tr from-pink-100 to-orange-100 rounded-full blur-3xl opacity-30"></div>
       </div>
 
       <div className="w-full max-w-md relative z-10">
-        {/* Header */}
+       
         <div className="text-center mb-10">
           <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-slate-900 to-slate-700 rounded-3xl mb-6 shadow-lg shadow-slate-900/20 transform hover:scale-105 transition-transform duration-300">
             <User className="w-8 h-8 text-white" />
@@ -57,7 +57,7 @@ const Login = () => {
           <p className="text-slate-600 text-lg">Sign in to continue your journey</p>
         </div>
 
-        {/* Form Card */}
+    
         <div className="bg-white/80 backdrop-blur-xl rounded-3xl shadow-xl shadow-slate-200/50 border border-slate-200/50 p-8 transform transition-all duration-300 hover:shadow-2xl hover:shadow-slate-200/60">
           <div className="space-y-6">
             {error && (
@@ -69,7 +69,7 @@ const Login = () => {
               </div>
             )}
 
-            {/* Email Field */}
+          
             <div className="space-y-2">
               <label 
                 htmlFor="email" 
@@ -102,7 +102,6 @@ const Login = () => {
               </div>
             </div>
 
-            {/* Password Field */}
             <div className="space-y-2">
               <div className="flex items-center justify-between ml-1">
                 <label 
@@ -143,7 +142,6 @@ const Login = () => {
               </div>
             </div>
 
-            {/* Submit Button */}
             <button
               type="button"
               onClick={handleSubmit}
@@ -190,7 +188,7 @@ const Login = () => {
           </div>
         </div>
 
-        {/* Footer */}
+   
         <div className="mt-8 text-center">
           <p className="text-xs text-slate-500">
             Protected by industry-standard encryption

@@ -20,7 +20,7 @@ const Register = () => {
     e.preventDefault();
     setError("");
 
-    // basic client-side validation
+   
     if (!formData.name || !formData.email || !formData.password) {
       setError("Please fill in all required fields");
       return;
@@ -29,13 +29,13 @@ const Register = () => {
     setLoading(true);
     try {
       const data = await register(formData);
-      // Many backends return { message } on success and no user (since login may not happen automatically)
+     
       if (data?.message) {
-        // show simple success feedback and navigate to login
+       
         alert(data.message);
         navigate("/login");
       } else if (data?.user) {
-        // If backend returns user (auto-login), navigate to profile
+    
         navigate("/profile");
       } else {
         setError(data?.message || "Registration failed");
