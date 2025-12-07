@@ -173,9 +173,36 @@ const getCategories=async(req,res)=>{
   }
 }
 
+const getCategoryById = async (req, res) => {
+  try {
+    const { id } = req.params; 
+
+    if (!id) {
+      return res.status(400).json({ message: "Category id is required" });
+    }
+
+    if (!mongoose.Types.ObjectId.isValid(id)) {
+      return res.status(400).json({ message: "Invalid category id" });
+    }
+
+    const category = await Category.findById(id);
+
+    if (!category) {
+      return res.status(404).json({ message: "Category not found" });
+    }
+
+    return res.json({ category });
+  } catch (err) {
+    console.error("getCategoryById error:", err);
+    return res.status(500).json({ message: "Server error" });
+  }
+};
+
+
 module.exports = {
   createCategory,
   updateCategory,
   deleteCategory,
-  getCategories
+  getCategories,
+  getCategoryById
 };

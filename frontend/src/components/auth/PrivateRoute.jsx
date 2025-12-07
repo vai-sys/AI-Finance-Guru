@@ -1,7 +1,7 @@
 import React from "react";
 import { Navigate, Outlet } from "react-router-dom";
 import { Loader2 } from "lucide-react";
-import { useAuth } from "../service/AuthContext"; 
+import { useAuth } from "../../service/AuthContext"; 
 
 const PrivateRoute = () => {
   const { user, loading } = useAuth();
