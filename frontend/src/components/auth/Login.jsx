@@ -1,6 +1,3 @@
-
-
-
 import React, { useState } from "react";
 import { User, Mail, Lock, Loader2, ArrowRight } from "lucide-react";
 import { useNavigate } from "react-router-dom";
